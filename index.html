@@ -9,14 +9,14 @@ b. Create a "screen" with an indentation. Fill it in a monochrome dark color, an
 + f. Add speaker/video camera elements (those above the screen)
 + g. Add side buttons
 + 3. A little more complicated variant - to set an image on the screen
-4. Extra task  * - to create an image on the screen (clock, date, background, camera icon, Slide to unlock element, etc.)
++ 4. Extra task  * - to create an image on the screen (clock, date, background, camera icon, Slide to unlock element, etc.)
 -->
 
 <!--  
   1. div.phone-container -> three divs for phone left buttons, phone front, phone right buttons
   2. div.screen -> three divs for phone top, actual screen, phone bottom
   3. div.phone-top -> two div, one for top camera, and one div bot for both speaker and second camera/sensor
-  4. div.phone-front-bot -> one div for the circular button
+  4. div.phone-bottom -> one div for the circular button
 -->
 
 <!DOCTYPE html>
@@ -55,10 +55,27 @@ b. Create a "screen" with an indentation. Fill it in a monochrome dark color, an
       <!--  Actual screen of the iphone-->
       <div class="phone-screen">
         <div class="not-panel-top">
+          <div class="network-circle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+          <div class="network-name">SingTel</div>
+          <div class="wifi"><img src="icons/wifi.png" alt="wifi"></div>       
+          <div class="battery"><img src="./icons/battery.png" alt=""></div>
         </div>
         <div id="screen-clock"></div>
         <div id="screen-date"></div>
-        <div class="screen-slider"></div>
+
+        <div class="screen-slider">
+          <div class="slider-text">
+            <div class="slider-sign">></div>
+            slide to unlock
+          </div>
+        </div>
+        
         <div class="not-panel-bot">
           <div class="camera-onscreen"><img src="icons/camera.png" alt=""></div>
         </div>
