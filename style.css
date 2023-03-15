@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-image: url('https://cdn.pixabay.com/photo/2017/10/22/21/02/food-2879265_1280.jpg');
+  background-image: url('./media/background.jpg');
   background-size: cover;
 }
 
@@ -41,7 +41,7 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: black;
-  background-image: url('https://images.pexels.com/photos/15005252/pexels-photo-15005252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: url('./media/screenback.webp');
   background-size: cover;
 }
 
