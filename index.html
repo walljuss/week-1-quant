@@ -1,0 +1,80 @@
+<!--  
+  1. Set the background. It should be stretched to 100% of the height and width of the browser tab.
+2. Smartphone
++ а. Must be centered in relation to the page
+b. Create a "screen" with an indentation. Fill it in a monochrome dark color, and the body in a color closer to the original.
++ c. Add rounded corners
++ d. Add a border of a different color to the phone
++ e. Add a "center round button" with a border
++ f. Add speaker/video camera elements (those above the screen)
++ g. Add side buttons
++ 3. A little more complicated variant - to set an image on the screen
+4. Extra task  * - to create an image on the screen (clock, date, background, camera icon, Slide to unlock element, etc.)
+-->
+
+<!--  
+  1. div.phone-container -> three divs for phone left buttons, phone front, phone right buttons
+  2. div.screen -> three divs for phone top, actual screen, phone bottom
+  3. div.phone-top -> two div, one for top camera, and one div bot for both speaker and second camera/sensor
+  4. div.phone-front-bot -> one div for the circular button
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="phone-container">
+
+
+    <div class="left-buttons">
+      <div class="button-sm"></div>
+      <div class="button-lr-parallel"></div>
+      <div class="button-lr"></div>
+    </div>
+
+    <div class="phone-front">
+
+      <!--  Top part of the phone front / top of the screen-->
+      <div class="phone-front-top">
+        <div class="camera">
+        </div>
+        <div class="bot-camera">
+          <div class="camera">
+          </div>
+          <hr>
+        </div>
+      </div>
+
+      <!--  Actual screen of the iphone-->
+      <div class="phone-screen">
+        <div class="not-panel-top">
+        </div>
+        <div id="screen-clock"></div>
+        <div id="screen-date"></div>
+        <div class="screen-slider"></div>
+        <div class="not-panel-bot">
+          <div class="camera-onscreen"><img src="icons/camera.png" alt=""></div>
+        </div>
+      </div>
+
+      <!-- Bottom part of the phone front -->
+      <div class="phone-front-bottom">
+        <div class="button"></div>
+      </div>
+    </div>
+
+    <div class="left-buttons">
+        <div class="button-lr-parallel"></div>
+    </div>
+
+
+  </div>
+</body>
+</html>

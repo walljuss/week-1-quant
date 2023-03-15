@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2017/10/22/21/02/food-2879265_1280.jpg');
+  background-size: cover;
+}
+
+.phone-container {
+  margin: 0 auto;
+  min-height: 36.5rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-front{
+  background-color: rgb(214, 226, 218);
+  width: 15rem;
+  height: 30rem;
+  border: 0.2rem solid rgb(230, 181, 181);
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.1rem 1rem 0.1rem black;
+}
+
+.phone-front-top {
+  background-color: rgb(214, 226, 218);
+  height: 13%;
+  border-radius: 2rem 2rem 0 0;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-screen {
+  color: white;
+  height: 74%;
+  width: 90%;
+  margin: 0 auto;
+  background-image: url('https://images.pexels.com/photos/15005252/pexels-photo-15005252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+}
+
+.phone-front-bottom {
+  background-color: rgb(214, 226, 218)  ;
+  height: 13%;
+  border-radius: 0 0 2rem 2rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera {
+  height: 0.3rem;
+  width: 0.3rem;
+  background-color: #121111;
+  border-radius: 50%;
+}
+
+.camera:first-of-type {
+  position:relative;
+  top: 0.5rem;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: row;
+}
+
+.speaker-line {
+  background-color: rgb(150, 150, 195);
+}
+
+
+hr {
+  display: block;
+  width: 1.75rem;
+  border: 0.1rem solid #1c1b1b;
+  border-radius: 0.1rem;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.camera:last-of-type {
+  position: relative;
+  top: 1.4rem;
+  right: 1.3rem;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.bot-camera {
+  position: relative;
+  bottom: .3rem;
+}
+
+
+
+.button {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #c0ded9;
+  border-radius: 50%;
+  border: 0.1rem solid grey;
+}
+
+
+.button-sm {
+  border-left: 0.2rem solid black;
+  height: 1.3rem;
+  position: relative;
+  bottom: 8rem;
+  border-radius: 0.4rem;
+}
+
+.button-lr-parallel {
+  border-left: 0.2rem solid black;
+  height: 2rem;
+  border-radius: 0.4rem;
+  position: relative;
+  bottom: 7rem;
+}
+
+.button-lr {
+  border-left: 0.2rem solid black;
+  height: 2rem;
+  border-radius: 0.4rem;
+  position: relative;
+  bottom: 6.7rem;
+}
+
+
+/* screen elements */
+
+
+
