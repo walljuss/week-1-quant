@@ -1,0 +1,94 @@
+/*
+--DVD logo movement--
+* try with x movement first => then color change in one axis => add audio in one axis bounce
+* try with y movement => then color change in two axis movement => add audio in two axis bounce
+* calculate timing of color change and bouce sound
+* ?add audio with timing withoutjs?
+*/
+
+:root {
+  --blue: invert(14%) sepia(91%) saturate(7105%) hue-rotate(241deg) brightness(90%) contrast(100%);
+  --green: invert(75%) sepia(87%) saturate(3549%) hue-rotate(76deg) brightness(116%) contrast(96%);
+  --red: invert(26%) sepia(99%) saturate(7384%) hue-rotate(358deg) brightness(103%) contrast(112%);
+  --orange: invert(71%) sepia(93%) saturate(2350%) hue-rotate(357deg) brightness(99%) contrast(108%);
+  --lightred:  invert(67%) sepia(78%) saturate(1299%) hue-rotate(314deg) brightness(103%) contrast(99%);
+  --purple: invert(41%) sepia(99%) saturate(7482%) hue-rotate(274deg) brightness(96%) contrast(99%);
+}
+body {
+  width: 100vw;
+}
+
+.imageOne {
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  animation:xAxisAnim 8s linear 0s infinite alternate,
+            changeColorAnim 24s 0s infinite reverse cubic-bezier(1,-0.01,1,-0.22),
+            yAxisAnim 4.8s linear 0s infinite alternate;
+  
+}
+
+
+.imageTwo {
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  animation:xAxisAnim 5s linear 0s infinite alternate-reverse,
+            changeColorAnim 15s 0s infinite cubic-bezier(1,-0.01,1,-0.22),
+            yAxisAnim 3s linear 0s infinite alternate;
+  
+}
+
+
+@keyframes xAxisAnim {
+  from { left: 0; } to { left: 80%; }
+}
+@keyframes yAxisAnim {
+  from { top: 0; } to { top: 80%; }
+}
+
+@keyframes changeColorAnim {
+  19.99% {
+    filter: none;
+  }
+  20% {
+    filter: var(--red);
+  }
+  33.32%{
+    filter: var(--red);
+  }
+  33.33% {
+    filter: var(--green);
+  }
+  39.99%{
+    filter: var(--green);
+  }
+  40% {
+    filter: var(--lightred);
+  }
+  59.99%{
+    filter: var(--lightred);
+  }
+  60% {
+    filter: var(--blue);
+  }
+  66.66% {
+    filter: var(--blue);
+  }
+  66.67% {
+    filter: var(--orange);
+  }
+  79.99% {
+    filter: var(--orange);
+  }
+  80% {
+    filter: var(--purple);
+  }
+  100% {
+    filter: var(--purple);
+  }
+} 
+
+
+
+
