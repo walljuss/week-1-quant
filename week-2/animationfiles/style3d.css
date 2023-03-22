@@ -1,0 +1,219 @@
+/*
+--DVD logo movement--
+* try with x movement first => then color change in one axis => add audio in one axis bounce
+* try with y movement => then color change in two axis movement => add audio in two axis bounce
+* calculate timing of color change and bouce sound
+* ?add audio with timing withoutjs?
+*/
+
+:root {
+  --blue: invert(14%) sepia(91%) saturate(7105%) hue-rotate(241deg) brightness(90%) contrast(100%);
+  --green: invert(75%) sepia(87%) saturate(3549%) hue-rotate(76deg) brightness(116%) contrast(96%);
+  --red: invert(26%) sepia(99%) saturate(7384%) hue-rotate(358deg) brightness(103%) contrast(112%);
+  --orange: invert(71%) sepia(93%) saturate(2350%) hue-rotate(357deg) brightness(99%) contrast(108%);
+  --lightred:  invert(67%) sepia(78%) saturate(1299%) hue-rotate(314deg) brightness(103%) contrast(99%);
+  --purple: invert(41%) sepia(99%) saturate(7482%) hue-rotate(274deg) brightness(96%) contrast(99%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to right,
+    rgb(243, 240, 240) 0%,
+    rgb(243, 240, 240) 55%,
+    lightgray 50%,
+    lightgray 100%
+  );
+  perspective: 900px;
+  perspective-origin: 50% 50%;
+}
+
+.top, .bottom {
+  background-color: rgb(237, 230, 231);
+  width: 100%;
+}
+
+.top {
+  height: 25%;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 25% 100%);
+  background-color: rgb(237, 237, 237);
+}
+
+.bottom {
+  clip-path: polygon(25% 0, 85% 0, 100% 100%, 0 100%);
+  height: 15%;
+  background-color: rgb(204, 202, 202);
+  border: 1px solid;
+}
+
+.mid {
+  height: 60%;
+  width: 100%;
+  align-self: center;
+  margin: 0 auto;
+  background-color: lightgray;
+  display: flex;
+}
+
+.center {
+  height: 100%;
+  background-color: rgb(176, 176, 176);
+  width: 60%;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.right {
+  width: 15%;
+  background-color: lightgray;
+}
+
+.left {
+  width: 25%;
+  background-color: rgb(243, 240, 240);
+}
+
+img {
+  height: 15%;
+  width: 20%;
+  position: absolute;
+
+  animation: xAnim 10s linear alternate infinite ,
+             yAnim 10s linear alternate infinite,
+             zAnim 10s linear alternate infinite,
+             colorChange 10s linear alternate infinite;
+}
+
+@keyframes xAnim{
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 40%;
+  }
+  35% {
+    left: 90%;
+  }
+  50% {
+    left: 50%;
+  }
+  65% {
+    left: 10%;
+  }
+  75% {
+    left: -10%;
+  }
+  90% {
+    left: 40%;
+  }
+
+  100% {
+    left: 60%;
+  }
+}
+
+
+@keyframes yAnim {
+  0% {
+    top: 0%;
+  }
+  20% {
+    top: 90%;
+  }
+  35% {
+    top: 40%;
+  }
+  50% {
+    top: 10%;
+  }
+  65% {
+    top: 5%;
+  }
+  75% {
+    top: 20%;
+  }
+  90% {
+    top: 40%;
+  }
+  100% {
+    top: 60%;
+  }
+}
+
+@keyframes zAnim{
+  0% {
+  }
+  20% {
+    transform: translateZ(-10rem);
+  }
+  35% {
+    transform: translateZ(-20rem);
+  }
+  50% {
+    transform: translateZ(-50rem);
+  }
+  65% {
+    transform: translateZ(2rem);
+  }
+  75% {
+    transform: translateZ(-20rem);
+  }
+  90% {
+    transform: translateZ(-50rem);
+  }
+  100% {
+    transform: translateZ(20rem);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    filter: none;
+  }
+  20% {
+    filter: none;
+  }
+  20.01% {
+    filter: var(--blue);
+  }
+  35% {
+    filter: var(--blue);
+  }
+  35.01% {
+    filter: var(--red);
+  }
+  50% {
+    filter: var(--red);
+  }
+  50.01% {
+    filter: var(--orange);
+  }
+  65% {
+    filter: var(--orange);
+  }
+  65.01% {
+    filter: var(--green);
+  }
+  75% {
+    filter: var(--green);
+  }
+  75.01% {
+    filter: var(--purple);
+  }
+  90% {
+    filter: var(--purple);
+  }
+  90.01% {
+    filter: var(--lightred);
+  }
+  100% {
+    filter: var(--lightred);
+  }
+}
