@@ -1,0 +1,31 @@
+
+body{
+  background: white;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+svg{
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+.long {
+  transform-origin: 50%;
+  animation: rotate linear 6s infinite;
+}
+
+.short {
+  transform-origin: 50%;
+  animation: rotate linear 48s infinite;
+}
+
+@keyframes rotate {
+  0% {
+
+  }
+  100% {
+    
+    transform: rotate(360deg);
+  }
+}
