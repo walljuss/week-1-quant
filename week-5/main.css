@@ -65,7 +65,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	width: 100%;
 }
 
-#taskInputText {
+#taskText {
 	margin: 1rem 0;
 	display: flex;
 	width: 80%;
@@ -300,4 +300,37 @@ button.activeBtn {
 	background-color: var(--button-blue);
 	color: white;
 	border: none;
+}
+
+.headerToDo {
+	display: flex;
+	width: 70%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.weatherDiv {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 2rem;
+	width: 20%;
+	top: 3%;
+	right: 25%;
+	z-index: -1;
+}
+
+.weatherInfo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.weatherInfo > span {
+	margin: 0 2rem;
+}
+
+.weatherLocation {
+	color: gray;
 }

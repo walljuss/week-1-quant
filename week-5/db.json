@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "id": "1879aa34ea14",
+      "title": "sadfsdf",
+      "type": "home",
+      "date": "2023-04-19T00:00:00.000Z",
+      "isCompleted": true
+    },
+    {
+      "id": "1879aa36c668",
+      "title": "dfdf",
+      "type": "health",
+      "date": "2023-04-19T00:00:00.000Z",
+      "isCompleted": false
+    },
+    {
+      "id": "1879aa77a683",
+      "title": "newtask",
+      "type": "other",
+      "date": "2023-04-20T00:00:00.000Z",
+      "isCompleted": true
+    },
+    {
+      "id": "1879aa847482",
+      "title": "there",
+      "type": "work",
+      "date": "2023-04-19T00:00:00.000Z",
+      "isCompleted": false
+    },
+    {
+      "id": "1879aa86b76a",
+      "title": "whats",
+      "type": "health",
+      "date": "2023-04-19T00:00:00.000Z",
+      "isCompleted": false
+    },
+    {
+      "id": "1879ab3423cf",
+      "title": "asdfds",
+      "type": "other",
+      "date": "2023-04-19T00:00:00.000Z",
+      "isCompleted": false
+    }
+  ]
+}
