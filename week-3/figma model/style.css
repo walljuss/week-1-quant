@@ -118,15 +118,12 @@ body {
     align-self: center;
   }
 
-
-
 } 
 
 /* main */
   .main {
     display: flex;
   }
-
 
 /*main-sidebar*/
   .main__sidebar {
@@ -188,8 +185,6 @@ body {
     border-top: 0.1rem solid var(--lightgrey);
   }
 
-
-
   @media (width < 700px) {
     .main__sidebar {
       display: none;
@@ -206,11 +201,12 @@ body {
     .upgrade__btn {
       margin-bottom: 1.5rem;
     }
-
-    
-      
   }
+
+
   /* main content */
+
+
   .main__content {
     display: flex;
     flex-direction: column;
@@ -220,8 +216,7 @@ body {
     justify-content: flex-start;
   }
 
-
-  /* upgrade start*/
+  /* upgrade section start*/
 
   .content__upgrade {
     margin-top: 2.8rem;
@@ -265,11 +260,9 @@ body {
     font-size: 1rem;
   }
 
-  /* upgrade end */
+  /* upgrade section end */
 
-
-
-  /* cards start */
+  /* cards section start */
   .main__cards {
     display: flex;
     width: 95%;
@@ -291,8 +284,6 @@ body {
     padding: 1rem;
     display: flex;
   }
-
- 
 
   .card--p {
     font-size: 1.4rem;
@@ -354,8 +345,7 @@ body {
     }
   }
 
-
-  /* cards end */
+  /* cards section end */
 
   /* graph start*/
   .main__graph {
@@ -378,7 +368,6 @@ body {
     padding-right: 1.5rem;
     font-weight: 600;
   }
-
 
   .graph__image {
     width: 100%;
@@ -439,8 +428,7 @@ body {
     margin: 0 1rem;
   }
 
-
-  /* apps start */
+  /* apps section start */
 
   .main__apps {
     
@@ -538,4 +526,4 @@ body {
     }    
   }
 
-  /* apps end */
+  /* apps section end */
