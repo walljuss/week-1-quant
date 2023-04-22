@@ -1,46 +1,39 @@
 {
   "tasks": [
     {
-      "id": "1879aa34ea14",
-      "title": "sadfsdf",
-      "type": "home",
-      "date": "2023-04-19T00:00:00.000Z",
-      "isCompleted": true
-    },
-    {
-      "id": "1879aa36c668",
-      "title": "dfdf",
-      "type": "health",
-      "date": "2023-04-19T00:00:00.000Z",
-      "isCompleted": false
-    },
-    {
-      "id": "1879aa77a683",
-      "title": "newtask",
-      "type": "other",
-      "date": "2023-04-20T00:00:00.000Z",
-      "isCompleted": true
-    },
-    {
-      "id": "1879aa847482",
-      "title": "there",
+      "id": "187a80d1eafc",
+      "title": "homework todo",
       "type": "work",
-      "date": "2023-04-19T00:00:00.000Z",
+      "date": "2023-04-22T00:00:00.000Z",
       "isCompleted": false
     },
     {
-      "id": "1879aa86b76a",
-      "title": "whats",
+      "id": "187a80d3b809",
+      "title": "house work clean",
+      "type": "home",
+      "date": "2023-04-22T00:00:00.000Z",
+      "isCompleted": false
+    },
+    {
+      "id": "187a80d6ce6a",
+      "title": "health check blood",
       "type": "health",
-      "date": "2023-04-19T00:00:00.000Z",
+      "date": "2023-04-22T00:00:00.000Z",
+      "isCompleted": true
+    },
+    {
+      "id": "187a80da5599",
+      "title": "misce",
+      "type": "other",
+      "date": "2023-05-22T00:00:00.000Z",
       "isCompleted": false
     },
     {
-      "id": "1879ab3423cf",
-      "title": "asdfds",
+      "id": "187a80dde531",
+      "title": "taskscopy",
       "type": "other",
-      "date": "2023-04-19T00:00:00.000Z",
-      "isCompleted": false
+      "date": "2023-05-22T00:00:00.000Z",
+      "isCompleted": true
     }
   ]
 }

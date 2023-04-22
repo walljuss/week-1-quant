@@ -16,13 +16,20 @@
 	// 	return [state, setValue];
 	// }
 
+	//renders data on tasks div
 	async function renderServerTasks() {
 		getTasks().then((data) => {
-			taskList = createTaskList(data, "allTasksDiv", renderApp);
+			renderTasksList(data, renderApp);
+			//search tasks input
+			const searchDiv = document.querySelector(".inputSearchContainer");
+			searchDiv.innerHTML = "";
+			const searchInput = searchInputCreate();
+			searchDiv.appendChild(searchInput);
 			searchInputRun(data);
 		});
 	}
 
+	//renders weather data
 	async function weatherRender(location, temp, imgIcon) {
 		const weatherLoc = document.querySelector(`.${location}`);
 		const weatherTemp = document.querySelector(`.${temp}`);
@@ -44,21 +51,23 @@
 		});
 	}
 
-	function App() {
-		//header Todo with weather
-		const rootDiv = document.getElementById("functional-example");
-		rootDiv.innerHTML = "";
-		const taskDiv = document.createElement("div");
-		taskDiv.className = "taskDiv";
-		headerDiv = headerTodo(renderApp);
-		taskDiv.appendChild(headerDiv);
-		rootDiv.appendChild(taskDiv);
-		renderServerTasks();
+	//rendering of parts which does not need re rendering
+	function staticPartRender() {
+		mainContainer = document.getElementById("functional-example");
+		mainDiv = mainContainerCreate(renderApp);
+		mainContainer.append(mainDiv);
 	}
 
+	//todo app
+	// function App() {
+	// 	//header Todo with weather
+	// 	renderServerTasks();
+	// }
+
+	//
 	function weatherApp() {
 		const weatherContainer = document.getElementById("weather");
-		const weatherData = weatherDiv();
+		const weatherData = weatherDivCreate();
 		weatherContainer.append(weatherData);
 		weatherRender("weatherLocation", "weatherTemp", "weatherImg");
 	}
@@ -68,9 +77,10 @@
 	 * On change whole app is re-rendered.
 	 */
 	function renderApp() {
-		App();
+		renderServerTasks();
 	}
 
-	renderApp();
+	staticPartRender();
 	weatherApp();
+	renderApp();
 })();

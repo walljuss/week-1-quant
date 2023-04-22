@@ -57,13 +57,13 @@ function addNewTask(renderFunction) {
 
 	//new task submit event
 	mainForm.addEventListener("submit", (event) => {
-		formSubmit(event, inputText, mainForm, renderFunction);
+		event.preventDefault();
+		formSubmit(event, inputText, renderFunction);
 	});
 
 	//buttons are added to divs etc.
 	taskCancelSubmitBtns.append(cancelBtn, submitBtn);
 	mainForm.appendChild(taskCancelSubmitBtns);
-	mainForm.onsubmit;
 	mainDiv.appendChild(mainForm);
 	mainDiv.id = "popup";
 	mainDiv.style.display = "none";
@@ -107,7 +107,7 @@ function createDateInput() {
 }
 
 //when addnewtask form is submitted
-function formSubmit(event, inputText, mainForm, renderFunction) {
+function formSubmit(event, inputText, renderFunction) {
 	event.preventDefault();
 	const inputRadio = document.querySelector(".taskInputTag");
 	const newTask = {};
@@ -134,13 +134,9 @@ function formSubmit(event, inputText, mainForm, renderFunction) {
 	addTask(newTask).then((data) => {
 		const popup = document.getElementById("popup");
 		popup.style.display = "none";
-		mainForm.reset();
+		inputText.value = "";
 		renderFunction();
 	});
-	const popup = document.getElementById("popup");
-	popup.style.display = "none";
-	mainForm.reset();
-	renderFunction();
 }
 
 //element create function
