@@ -1,0 +1,44 @@
+.header {
+	display: flex;
+	width: 80%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+
+.headerExtraLarge {
+	font-size: 2rem;
+	margin: 0;
+	padding: 1rem 0;
+	margin: 1rem 0;
+}
+
+.searchContainer {
+	display: flex;
+	width: 70%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.inputSearchContainer {
+	width: 85%;
+}
+
+.newTaskButton {
+	width: 15%;
+	background-color: var(--button-light-blue);
+	border: none;
+	margin-left: 2rem;
+	padding: 0.9rem;
+	border-radius: 0.5rem;
+	color: var(--button-dark-blue);
+	font-weight: 700;
+}
+
+.searchInput {
+	width: 95%;
+	padding: 0.8rem;
+	border-radius: 0.5rem;
+	border: 0.1rem solid var(--input-gray);
+	background-color: var(--input-background);
+}

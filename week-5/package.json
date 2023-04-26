@@ -1,6 +1,28 @@
 {
-  "dependencies": {
-    "json-server": "^0.17.3",
-    "live-server": "^1.2.2"
-  }
+	"name": "week-7",
+	"description": "Starting with lecture 5, you will be working on a to-do app.",
+	"version": "1.0.0",
+	"main": "webpack.config.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"json-server": "json-server --watch db.json --port 3004",
+		"serve": "webpack serve"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"json-server": "^0.17.3"
+	},
+	"devDependencies": {
+		"css-loader": "^6.7.3",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.5.1",
+		"style-loader": "^3.3.2",
+		"ts-loader": "^9.4.2",
+		"webpack": "^5.81.0",
+		"webpack-cli": "^5.0.2",
+		"webpack-dev-server": "^4.13.3"
+	}
 }

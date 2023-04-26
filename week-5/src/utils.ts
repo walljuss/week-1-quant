@@ -1,29 +1,21 @@
-//sorting tasks array according to objects
-function taskSort(tasks) {
-	tasks.sort((a, b) => {
-		const date1 = new Date(a.timestamp);
-		const date2 = new Date(b.timestamp);
+import { Task } from "./interfaces";
+
+function taskSort(tasks: Task[]): void {
+	tasks.sort((a: Task, b: Task) => {
+		const date1: Date = new Date(a.date);
+		const date2: Date = new Date(b.date);
 		return date1.getTime() - date2.getTime();
 	});
 }
 
-function Button({ text, onClick }) {
-	const button = document.createElement("button");
-	button.innerHTML = text;
-	button.onclick = onClick;
-	return button;
-}
-
-//formats the date so that will show date as either yesterday, today, tomorrow or
-//as day month
-function formatDate(date) {
+function formatDate(date: Date): string {
 	const today = new Date();
 	const yesterday = new Date(today);
 	yesterday.setDate(today.getDate() - 1);
 	const tomorrow = new Date(today);
 	tomorrow.setDate(today.getDate() + 1);
 
-	dateNew = new Date(date);
+	let dateNew = new Date(date);
 
 	if (dateNew.toDateString() === today.toDateString()) {
 		return "Today";
@@ -47,3 +39,5 @@ function formatDate(date) {
 		return `${dayName}, ${dayMonth} ${nameMonth}`;
 	}
 }
+
+export { taskSort, formatDate };
