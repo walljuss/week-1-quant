@@ -65,7 +65,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	width: 100%;
 }
 
-#taskInputText {
+#taskText {
 	margin: 1rem 0;
 	display: flex;
 	width: 80%;
@@ -109,7 +109,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	border: 0.1rem solid black;
 }
 
-.taskDiv {
+.main {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -117,28 +117,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	padding-left: 7rem;
 }
 
-.searchButton {
+.searchDiv {
 	display: flex;
 	width: 70%;
 	align-items: center;
 	justify-content: space-between;
 }
 
+.inputSearchContainer {
+	width: 90%;
+}
+
 .searchInput {
+	width: 95%;
 	padding: 0.8rem;
-	width: 80%;
 	border-radius: 0.5rem;
 	border: 0.1rem solid var(--input-gray);
 	background-color: var(--input-background);
 }
 
-.taskItemRendered {
+.taskItem {
 	display: flex;
 	width: 80%;
 	align-items: center;
 }
 
-.divComplete .taskItemRendered {
+.completeTasks .taskItem {
 	color: var(--input-gray);
 }
 
@@ -153,7 +157,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	padding: 0;
 }
 
-.ifComplete {
+.isCompleted {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -165,7 +169,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	outline: none;
 }
 
-.ifComplete:checked {
+.isCompleted:checked {
 	background: var(--button-gray) url(./media/checked.png) center/100% 100%
 		no-repeat;
 	border: none;
@@ -229,7 +233,7 @@ input[type="radio"]:checked + label[for="other"] {
 	border: 1px solid var(--dark-orange);
 }
 
-.taskTag {
+.taskTagType {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -239,11 +243,11 @@ input[type="radio"]:checked + label[for="other"] {
 	color: #838383;
 }
 
-.taskExtraInfo {
+.taskTypeAndDate {
 	display: flex;
 }
 
-.taskExtraInfo > p {
+.taskTypeAndDate > p {
 	margin: 1rem 1rem 0 0;
 }
 
@@ -268,9 +272,9 @@ input[type="radio"]:checked + label[for="other"] {
 }
 
 .newTaskButton {
+	width: 15%;
 	background-color: var(--button-light-blue);
 	border: none;
-	height: 100%;
 	margin-left: 2rem;
 	padding: 0.9rem;
 	border-radius: 0.5rem;
@@ -300,4 +304,37 @@ button.activeBtn {
 	background-color: var(--button-blue);
 	color: white;
 	border: none;
+}
+
+.header {
+	display: flex;
+	width: 70%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.weatherDiv {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 2rem;
+	width: 20%;
+	top: 3%;
+	right: 25%;
+	z-index: -1;
+}
+
+.weatherInfo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.weatherInfo > span {
+	margin: 0 2rem;
+}
+
+.weatherLocation {
+	color: gray;
 }
