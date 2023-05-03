@@ -22,7 +22,7 @@ export const UncompletedTasks = (props) => {
 					handleSearchChange={handleSearchChange}
 					searchValue={searchValue}
 				/>
-				<NewTask props={props} />
+				<NewTask {...props} />
 			</div>
 
 			<div className="allTasksContainer">
