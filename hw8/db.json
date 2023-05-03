@@ -1,31 +1,10 @@
 {
   "tasks": [
     {
-      "title": "asdasd",
-      "type": "home",
-      "date": "1990-12-12",
-      "isCompleted": true,
-      "id": "4sU8TF9"
-    },
-    {
-      "title": "sdsd",
-      "type": "home",
-      "date": "21990-02-22",
-      "isCompleted": false,
-      "id": "SBEIvAA"
-    },
-    {
-      "title": "sd",
-      "type": "work",
-      "date": "1990-12-12",
-      "isCompleted": false,
-      "id": "qIjl0ZQ"
-    },
-    {
       "title": "new task is here",
       "type": "home",
       "date": "1990-12-12",
-      "isCompleted": false,
+      "isCompleted": true,
       "id": "BStNWVz"
     },
     {
@@ -33,7 +12,7 @@
       "title": "asd",
       "type": "health",
       "date": "2023-05-03T00:00:00.000Z",
-      "isCompleted": true
+      "isCompleted": false
     },
     {
       "title": "dsds",

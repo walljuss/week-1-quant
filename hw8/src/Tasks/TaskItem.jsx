@@ -2,10 +2,58 @@ import React from "react";
 import delImg from "../assets/shape.png";
 import { formatDate } from "./utils";
 import { deleteTask, updateTask } from "../serverMethods";
+import { useState } from "react";
 
 async function handleDeleteTask(id) {
 	await deleteTask(id);
 }
+
+const TaskList = (props) => {
+	const { tasks, setDataUpdate } = props;
+
+	const [searchValue, setSearchValue] = useState("");
+
+	const handleSearchChange = (event) => {
+		setSearchValue(event.target.value);
+	};
+
+	const filteredTasks = tasks.filter(
+		(task) =>
+			!task.isComplete &&
+			task.title.toLowerCase().includes(searchValue.toLowerCase())
+	);
+
+	return (
+		<>
+			<SearchTask
+				searchValue={searchValue}
+				handleSearchChange={handleSearchChange}
+			/>
+			<div className="completeTasksContainer">
+				<p className="headerLarge">Complete Tasks</p>
+				<div className="completeTaskList">
+					{filteredTasks.length > 0 ? (
+						<div className="allTaskList">
+							{filteredTasks.map((task) => {
+								if (task.isCompleted) {
+									return (
+										<TaskItem
+											task={task}
+											key={task.id}
+											setDataUpdate={setDataUpdate}
+										/>
+									);
+								}
+							})}
+						</div>
+					) : (
+						<></>
+					)}
+				</div>
+			</div>
+		</>
+	);
+};
 
 async function handleUpdateTask(id, updatedTask) {
 	const data = await updateTask(id, updatedTask);

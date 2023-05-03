@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Weather } from "./Weather/Weather";
 import { NewTask } from "./NewTask/NewTask";
 import { Tasks } from "./Tasks/Tasks";
-import { SearchTasks } from "./SearchTasks/SearchTasks";
 
 function App() {
 	const [tasks, setTasks] = useState([]);
@@ -25,11 +24,7 @@ function App() {
 		<div className="main">
 			<h1>To Do List</h1>
 			<Weather />
-			<div className="searchContainer">
-				<SearchTasks />
-				<NewTask setDataUpdate={setDataUpdate} />
-			</div>
-			<Tasks tasks={tasks} setTasks={setTasks} setDataUpdate={setDataUpdate} />
+			<Tasks tasks={tasks} setDataUpdate={setDataUpdate} />
 		</div>
 	);
 }
