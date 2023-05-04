@@ -1,6 +1,6 @@
-import { TaskItem } from "./TaskItem";
+import { TaskItem } from "../TaskItem/TaskItem";
 import React from "react";
-import { NewTask } from "../NewTask/NewTask";
+import { NewTask } from "../../NewTask/NewTask";
 
 export const UncompletedTasks = (props) => {
 	const { tasks, setDataUpdate } = props;

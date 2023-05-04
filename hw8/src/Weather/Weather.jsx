@@ -36,7 +36,7 @@ const Weather = () => {
 		<div className="weatherContainer">
 			<img src={weather.current.condition.icon} alt="" />
 			<div className="weatherInfo">
-				<span className="weatherTemperature">{weather.current.temp_c}</span>
+				<span className="weatherTemperature">{`${weather.current.temp_c}\u00B0C	`}</span>
 				<span className="weatherLocation">{weather.location.name}</span>
 			</div>
 		</div>

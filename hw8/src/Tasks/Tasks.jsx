@@ -1,5 +1,5 @@
-import { UncompletedTasks } from "./UncompletedTasks";
-import { CompletedTasks } from "./CompletedTasks";
+import { UncompletedTasks } from "./UncompletedTasks/UncompletedTasks";
+import { CompletedTasks } from "./CompletedTasks/CompletedTasks";
 import "./Tasks.css";
 
 const Tasks = (props) => {

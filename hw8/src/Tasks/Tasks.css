@@ -40,7 +40,7 @@
 }
 
 .isCompleted:checked {
-	background: var(--button-gray) url(../assets/checked.png) center/100% 100%
+	background: var(--button-gray) url(./assets/checked.png) center/100% 100%
 		no-repeat;
 	border: none;
 }

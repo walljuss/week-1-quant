@@ -13,7 +13,6 @@ const NewTaskForm = (props) => {
 const TaskForm = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const form = e.currentTarget;
 		const formData = new FormData(e.currentTarget);
 		const newTask = Object.fromEntries(formData);
 		newTask.isCompleted = false;

@@ -1,5 +1,5 @@
 import React from "react";
-import NewTaskForm from "./NewTaskForm";
+import NewTaskForm from "../NewTaskForm/NewTaskForm";
 import "./NewTask.css";
 import { useState } from "react";
 

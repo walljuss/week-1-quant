@@ -1,8 +1,9 @@
-import { TaskItem } from "./TaskItem";
+import { TaskItem } from "../TaskItem/TaskItem";
 import React from "react";
 
 export const CompletedTasks = (props) => {
 	const { tasks, setDataUpdate } = props;
+
 	return (
 		<div className="completeTasksContainer">
 			<p className="headerLarge">Complete Tasks</p>

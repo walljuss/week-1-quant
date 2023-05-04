@@ -1,7 +1,7 @@
 import React from "react";
 import delImg from "../assets/shape.png";
-import { formatDate } from "./utils";
-import { deleteTask, updateTask } from "../serverMethods";
+import { formatDate } from "../utils";
+import { deleteTask, updateTask } from "../../serverMethods";
 import { useState } from "react";
 
 async function handleDeleteTask(id) {
