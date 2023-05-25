@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": "187e2815db01",
+      "title": "asd",
+      "type": "health",
+      "date": "2023-05-03T00:00:00.000Z",
+      "isCompleted": true
+    },
+    {
+      "title": "dsds",
+      "type": "other",
+      "date": "1222-12-12",
+      "isCompleted": false,
+      "id": "gJE0lIe"
+    },
+    {
+      "title": "trying this task",
+      "type": "home",
+      "date": "1987-02-20",
+      "isCompleted": false,
+      "id": "gLaQkcU"
+    }
+  ]
+}
